@@ -3,6 +3,7 @@ package net.legendzary.ppbmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.legendzary.ppbmod.block.ModBlocks;
+import net.legendzary.ppbmod.item.ModItemGroups;
 import net.legendzary.ppbmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,5 +16,6 @@ public class PushpinbirdMod implements ModInitializer {
 	public void onInitialize() {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModItemGroups.registerItemGroups();
 	}
 }

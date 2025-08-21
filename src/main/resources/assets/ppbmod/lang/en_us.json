@@ -4,5 +4,7 @@
 
   "block.ppbmod.pushpibald_block": "Block of pushpiBALD",
   "block.ppbmod.pushpibald_ore_stone": "pushpiBALD Ore",
-  "block.ppbmod.pushpibald_ore_deepslate": "Deepslate pushpiBALD Ore"
+  "block.ppbmod.pushpibald_ore_deepslate": "Deepslate pushpiBALD Ore",
+
+  "itemgroup.ppbmod.item.group": "Pushpinbird Mod"
 }

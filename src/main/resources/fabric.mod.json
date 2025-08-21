@@ -8,8 +8,8 @@
 		"Legendzary"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://twitch.tv/pushpinbird",
+		"sources": "https://github.com/Legendzary/pushpinbird-mod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/ppbmod/icon.png",
@@ -20,7 +20,10 @@
 		],
 		"fabric-datagen": [
 			"net.legendzary.ppbmod.PushpinbirdModDataGenerator"
-		]
+		],
+        "client": [
+            "net.legendzary.ppbmod.PushpinbirdModClient"
+        ]
 	},
 	"mixins": [
 		"ppbmod.mixins.json"

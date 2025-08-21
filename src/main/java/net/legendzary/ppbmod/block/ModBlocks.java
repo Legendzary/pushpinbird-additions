@@ -1,0 +1,50 @@
+package net.legendzary.ppbmod.block;
+
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.legendzary.ppbmod.PushpinbirdMod;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
+
+public class ModBlocks {
+    public static final Block PUSHPIBALD_BLOCK = registerBlock("pushpibald_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+    public static final Block PUSHPIBALD_ORE_STONE = registerBlock("pushpibald_ore_stone",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+    public static final Block PUSHPIBALD_ORE_DEEPSLATE = registerBlock("pushpibald_ore_deepslate",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.METAL)));
+
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(PushpinbirdMod.MOD_ID, name), block);
+    }
+
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, Identifier.of(PushpinbirdMod.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()));
+    }
+
+    public static void registerModBlocks() {
+        PushpinbirdMod.LOGGER.info("Registering Mod Blocks for " + PushpinbirdMod.MOD_ID);
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(ModBlocks.PUSHPIBALD_BLOCK);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(ModBlocks.PUSHPIBALD_ORE_STONE);
+            fabricItemGroupEntries.add(ModBlocks.PUSHPIBALD_ORE_DEEPSLATE);
+        });
+    }
+}

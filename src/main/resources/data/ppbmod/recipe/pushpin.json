@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "combat",
+  "ingredients": [
+    {"item": "minecraft:iron_ingot"},
+    {"item": "minecraft:red_dye"}
+  ],
+  "result": {
+    "count": 4,
+    "id": "ppbmod:pushpin"
+  }
+}

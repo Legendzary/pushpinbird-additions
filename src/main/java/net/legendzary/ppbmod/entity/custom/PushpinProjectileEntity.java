@@ -19,6 +19,9 @@ public class PushpinProjectileEntity extends PersistentProjectileEntity {
 
     public PushpinProjectileEntity(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
         super(entityType, world);
+
+        this.rotation = getPitch() + 90;
+        this.setBoundingBox(this.getBoundingBox().shrink(0.5,0.5,0.5));
     }
 
     public PushpinProjectileEntity(World world, PlayerEntity player) {
@@ -58,23 +61,23 @@ public class PushpinProjectileEntity extends PersistentProjectileEntity {
         super.onBlockHit(result);
 
         if (result.getSide() == Direction.SOUTH) {
-            groundedOffset = new Vector2f(215f, 180f);
+            groundedOffset = new Vector2f(90f, 180f);
         }
         if (result.getSide() == Direction.NORTH) {
-            groundedOffset = new Vector2f(215f, 0f);
+            groundedOffset = new Vector2f(90f, 0f);
         }
         if (result.getSide() == Direction.EAST) {
-            groundedOffset = new Vector2f(215f, -90f);
+            groundedOffset = new Vector2f(90f, -90f);
         }
         if (result.getSide() == Direction.WEST) {
-            groundedOffset = new Vector2f(215f, 90f);
+            groundedOffset = new Vector2f(90f, 90f);
         }
 
         if (result.getSide() == Direction.DOWN) {
-            groundedOffset = new Vector2f(115f, 180f);
+            groundedOffset = new Vector2f(0f, 180f);
         }
         if (result.getSide() == Direction.UP) {
-            groundedOffset = new Vector2f(285f, 180f);
+            groundedOffset = new Vector2f(180f, 0);
         }
     }
 

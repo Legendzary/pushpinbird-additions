@@ -25,6 +25,8 @@ public class PushpinProjectileRenderer extends EntityRenderer<PushpinProjectileE
                        VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
 
+        matrices.scale(0.5f,0.5f,0.5f);
+
         if(!entity.isGrounded()) {
             matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(MathHelper.lerp(tickDelta, entity.prevYaw, entity.getYaw())));
             matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(entity.getRenderingRotation() * 5f));

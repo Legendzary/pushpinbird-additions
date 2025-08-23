@@ -21,6 +21,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PUSHPIBALD_ORE_STONE);
                         entries.add(ModBlocks.PUSHPIBALD_ORE_DEEPSLATE);
                         entries.add(ModItems.PUSHPIN);
+                        entries.add(ModItems.PUSHPIBALD_SWORD);
+                        entries.add(ModItems.PUSHPIBALD_PICKAXE);
+                        entries.add(ModItems.PUSHPIBALD_AXE);
+                        entries.add(ModItems.PUSHPIBALD_SHOVEL);
+                        entries.add(ModItems.PUSHPIBALD_HOE);
 
                     }).build());
 

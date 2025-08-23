@@ -1,6 +1,11 @@
 {
   "item.ppbmod.pushpibald": "pushpiBALD",
   "item.ppbmod.pushpin": "Pushpin",
+  "item.ppbmod.pushpibald_sword": "pushpiBALD Sword",
+  "item.ppbmod.pushpibald_pickaxe": "pushpiBALD Pickaxe",
+  "item.ppbmod.pushpibald_axe": "pushpiBALD Axe",
+  "item.ppbmod.pushpibald_shovel": "pushpiBALD Shovel",
+  "item.ppbmod.pushpibald_hoe": "pushpiBALD Hoe",
 
   "block.ppbmod.pushpibald_block": "Block of pushpiBALD",
   "block.ppbmod.pushpibald_ore_stone": "pushpiBALD Ore",

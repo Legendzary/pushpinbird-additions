@@ -22,25 +22,62 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        List<ItemConvertible> PUSHPIN_SMELTABLES = List.of(ModBlocks.PUSHPIBALD_ORE_STONE, ModBlocks.PUSHPIBALD_ORE_DEEPSLATE);
+        List<ItemConvertible> PUSHPIBALD_SMELTABLES = List.of(ModBlocks.PUSHPIBALD_ORE_STONE, ModBlocks.PUSHPIBALD_ORE_DEEPSLATE);
 
-        offerSmelting(exporter, PUSHPIN_SMELTABLES, RecipeCategory.MISC, ModItems.PUSHPIBALD, 0.25f, 200, "PUSHPIBALD");
-        offerBlasting(exporter, PUSHPIN_SMELTABLES, RecipeCategory.MISC, ModItems.PUSHPIBALD, 0.25f, 100, "PUSHPIBALD");
+        offerSmelting(exporter, PUSHPIBALD_SMELTABLES, RecipeCategory.MISC, ModItems.PUSHPIBALD, 0.25f, 200, "PUSHPIBALD");
+        offerBlasting(exporter, PUSHPIBALD_SMELTABLES, RecipeCategory.MISC, ModItems.PUSHPIBALD, 0.25f, 100, "PUSHPIBALD");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.PUSHPIBALD, RecipeCategory.DECORATIONS, ModBlocks.PUSHPIBALD_BLOCK);
 
-/*      ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PUSHPIBALD_BLOCK)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PUSHPIBALD_SWORD)
+            .pattern("#")
+            .pattern("#")
+            .pattern("I")
+            .input('#', ModItems.PUSHPIBALD)
+            .input('I', Items.STICK)
+            .criterion(hasItem(ModItems.PUSHPIBALD), conditionsFromItem(ModItems.PUSHPIBALD))
+            .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PUSHPIBALD_PICKAXE)
                 .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .input('#', ModItems.PUSHPIN)
-                .criterion(hasItem(ModItems.PUSHPIN), conditionsFromItem(ModItems.PUSHPIN))
-                .offerTo(exporter);*/
+                .pattern(" I ")
+                .pattern(" I ")
+                .input('#', ModItems.PUSHPIBALD)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.PUSHPIBALD), conditionsFromItem(ModItems.PUSHPIBALD))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PUSHPIBALD_AXE)
+                .pattern("##")
+                .pattern("I#")
+                .pattern("I ")
+                .input('#', ModItems.PUSHPIBALD)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.PUSHPIBALD), conditionsFromItem(ModItems.PUSHPIBALD))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PUSHPIBALD_SHOVEL)
+                .pattern("#")
+                .pattern("I")
+                .pattern("I")
+                .input('#', ModItems.PUSHPIBALD)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.PUSHPIBALD), conditionsFromItem(ModItems.PUSHPIBALD))
+                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PUSHPIBALD_HOE)
+                .pattern("##")
+                .pattern("I ")
+                .pattern("I ")
+                .input('#', ModItems.PUSHPIBALD)
+                .input('I', Items.STICK)
+                .criterion(hasItem(ModItems.PUSHPIBALD), conditionsFromItem(ModItems.PUSHPIBALD))
+                .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PUSHPIN, 4)
-                .input(Items.RED_DYE)
-                .input(Items.IRON_INGOT)
-                .criterion(hasItem(ModBlocks.PUSHPIBALD_BLOCK), conditionsFromItem(ModBlocks.PUSHPIBALD_BLOCK))
-                .offerTo(exporter);
+            .input(Items.RED_DYE)
+            .input(Items.IRON_INGOT)
+            .criterion(hasItem(ModBlocks.PUSHPIBALD_BLOCK), conditionsFromItem(ModBlocks.PUSHPIBALD_BLOCK))
+            .offerTo(exporter);
     }
 }

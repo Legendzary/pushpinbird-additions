@@ -3,6 +3,7 @@ package net.legendzary.ppbmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.legendzary.ppbmod.block.ModBlocks;
+import net.legendzary.ppbmod.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -24,5 +25,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PUSHPIBALD_BLOCK)
                 .add(ModBlocks.PUSHPIBALD_ORE_STONE)
                 .add(ModBlocks.PUSHPIBALD_ORE_DEEPSLATE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PUSHPIBALD_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

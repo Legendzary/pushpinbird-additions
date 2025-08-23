@@ -23,5 +23,11 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.PUSHPIBALD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PUSHPIBALD_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PUSHPIBALD_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PUSHPIBALD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PUSHPIBALD_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PUSHPIBALD_HOE, Models.HANDHELD);
     }
 }

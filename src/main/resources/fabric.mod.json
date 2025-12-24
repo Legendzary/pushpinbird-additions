@@ -1,32 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "ppbmod",
+	"id": "ppbadditions",
 	"version": "${version}",
-	"name": "Pushpinbird Mod",
+	"name": "Pushpinbird Additions",
 	"description": "This mod is made for Twitch streamer Pushpinbird.",
 	"authors": [
 		"Legendzary"
 	],
 	"contact": {
 		"homepage": "https://twitch.tv/pushpinbird",
-		"sources": "https://github.com/Legendzary/pushpinbird-mod"
+		"sources": "https://github.com/Legendzary/pushpinbird-additions"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/ppbmod/icon.png",
+	"license": "CC BY 4.0",
+	"icon": "assets/ppbadditions/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.legendzary.ppbmod.PushpinbirdMod"
+			"net.legendzary.ppbadditions.PushpinbirdAdditions"
 		],
 		"fabric-datagen": [
-			"net.legendzary.ppbmod.PushpinbirdModDataGenerator"
+			"net.legendzary.ppbadditions.PushpinbirdAdditionsDataGenerator"
 		],
         "client": [
-            "net.legendzary.ppbmod.PushpinbirdModClient"
+            "net.legendzary.ppbadditions.PushpinbirdAdditionsClient"
         ]
 	},
 	"mixins": [
-		"ppbmod.mixins.json"
+      "ppbadditions.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",

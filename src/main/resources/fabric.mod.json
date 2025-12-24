@@ -11,7 +11,7 @@
 		"homepage": "https://twitch.tv/pushpinbird",
 		"sources": "https://github.com/Legendzary/pushpinbird-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "CC BY 4.0",
 	"icon": "assets/ppbmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
